@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxStudent = new System.Windows.Forms.TextBox();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_addStudent = new System.Windows.Forms.Button();
             this.btn_remStudent = new System.Windows.Forms.Button();
@@ -36,15 +35,8 @@
             this.btn_lowest = new System.Windows.Forms.Button();
             this.btn_highest = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
+            this.textBoxStudent = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // textBoxStudent
-            // 
-            this.textBoxStudent.Location = new System.Drawing.Point(406, 44);
-            this.textBoxStudent.Multiline = true;
-            this.textBoxStudent.Name = "textBoxStudent";
-            this.textBoxStudent.Size = new System.Drawing.Size(251, 222);
-            this.textBoxStudent.TabIndex = 0;
             // 
             // btn_clear
             // 
@@ -63,6 +55,7 @@
             this.btn_addStudent.TabIndex = 3;
             this.btn_addStudent.Text = "Add Student / Grade";
             this.btn_addStudent.UseVisualStyleBackColor = true;
+            this.btn_addStudent.Click += new System.EventHandler(this.btn_addStudent_Click);
             // 
             // btn_remStudent
             // 
@@ -109,6 +102,14 @@
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
             // 
+            // textBoxStudent
+            // 
+            this.textBoxStudent.Location = new System.Drawing.Point(406, 44);
+            this.textBoxStudent.Multiline = true;
+            this.textBoxStudent.Name = "textBoxStudent";
+            this.textBoxStudent.Size = new System.Drawing.Size(251, 222);
+            this.textBoxStudent.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,8 +133,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxStudent;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_addStudent;
         private System.Windows.Forms.Button btn_remStudent;
@@ -141,6 +140,7 @@
         private System.Windows.Forms.Button btn_lowest;
         private System.Windows.Forms.Button btn_highest;
         private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.TextBox textBoxStudent;
     }
 }
 
