@@ -1,6 +1,6 @@
 ﻿namespace StudentGradesApp1
 {
-    partial class Studenr
+    partial class Student
     {
         /// <summary>
         /// Required designer variable.
@@ -55,6 +55,7 @@
             this.btn_average.TabIndex = 5;
             this.btn_average.Text = "Average Grade";
             this.btn_average.UseVisualStyleBackColor = true;
+            this.btn_average.Click += new System.EventHandler(this.btn_average_Click);
             // 
             // btn_lowest
             // 
@@ -64,6 +65,7 @@
             this.btn_lowest.TabIndex = 6;
             this.btn_lowest.Text = "Lowest Grade";
             this.btn_lowest.UseVisualStyleBackColor = true;
+            this.btn_lowest.Click += new System.EventHandler(this.btn_lowest_Click);
             // 
             // btn_highest
             // 
@@ -73,6 +75,7 @@
             this.btn_highest.TabIndex = 7;
             this.btn_highest.Text = "Highest Grade";
             this.btn_highest.UseVisualStyleBackColor = true;
+            this.btn_highest.Click += new System.EventHandler(this.btn_highest_Click);
             // 
             // btn_exit
             // 
@@ -91,20 +94,21 @@
             this.btn_writeToFile.TabIndex = 9;
             this.btn_writeToFile.Text = "Write to File";
             this.btn_writeToFile.UseVisualStyleBackColor = true;
+            this.btn_writeToFile.Click += new System.EventHandler(this.btn_writeToFile_Click);
             // 
             // listBoxStudent
             // 
             this.listBoxStudent.FormattingEnabled = true;
             this.listBoxStudent.Location = new System.Drawing.Point(434, 48);
             this.listBoxStudent.Name = "listBoxStudent";
-            this.listBoxStudent.Size = new System.Drawing.Size(225, 160);
+            this.listBoxStudent.Size = new System.Drawing.Size(306, 160);
             this.listBoxStudent.TabIndex = 10;
             // 
-            // Studenr
+            // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 260);
+            this.ClientSize = new System.Drawing.Size(787, 260);
             this.Controls.Add(this.listBoxStudent);
             this.Controls.Add(this.btn_writeToFile);
             this.Controls.Add(this.btn_exit);
@@ -112,7 +116,7 @@
             this.Controls.Add(this.btn_lowest);
             this.Controls.Add(this.btn_average);
             this.Controls.Add(this.btn_addStudent);
-            this.Name = "Studenr";
+            this.Name = "Student";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Grades 1 v1.0";
             this.Load += new System.EventHandler(this.Form1_Load);

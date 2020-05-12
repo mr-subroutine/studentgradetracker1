@@ -16,7 +16,7 @@ namespace StudentGradesApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Studenr());
+            Application.Run(new Student());
         }
     }
 }
