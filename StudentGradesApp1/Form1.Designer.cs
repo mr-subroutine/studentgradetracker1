@@ -30,17 +30,17 @@
         {
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_addStudent = new System.Windows.Forms.Button();
-            this.btn_remStudent = new System.Windows.Forms.Button();
             this.btn_average = new System.Windows.Forms.Button();
             this.btn_lowest = new System.Windows.Forms.Button();
             this.btn_highest = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.textBoxStudent = new System.Windows.Forms.TextBox();
+            this.btn_writeToFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(464, 290);
+            this.btn_clear.Location = new System.Drawing.Point(225, 44);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(134, 43);
             this.btn_clear.TabIndex = 2;
@@ -56,15 +56,6 @@
             this.btn_addStudent.Text = "Add Student / Grade";
             this.btn_addStudent.UseVisualStyleBackColor = true;
             this.btn_addStudent.Click += new System.EventHandler(this.btn_addStudent_Click);
-            // 
-            // btn_remStudent
-            // 
-            this.btn_remStudent.Location = new System.Drawing.Point(225, 44);
-            this.btn_remStudent.Name = "btn_remStudent";
-            this.btn_remStudent.Size = new System.Drawing.Size(134, 43);
-            this.btn_remStudent.TabIndex = 4;
-            this.btn_remStudent.Text = "Remove Student / Grade";
-            this.btn_remStudent.UseVisualStyleBackColor = true;
             // 
             // btn_average
             // 
@@ -95,7 +86,7 @@
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(225, 165);
+            this.btn_exit.Location = new System.Drawing.Point(225, 223);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(134, 43);
             this.btn_exit.TabIndex = 8;
@@ -110,16 +101,25 @@
             this.textBoxStudent.Size = new System.Drawing.Size(251, 222);
             this.textBoxStudent.TabIndex = 0;
             // 
+            // btn_writeToFile
+            // 
+            this.btn_writeToFile.Location = new System.Drawing.Point(225, 165);
+            this.btn_writeToFile.Name = "btn_writeToFile";
+            this.btn_writeToFile.Size = new System.Drawing.Size(134, 43);
+            this.btn_writeToFile.TabIndex = 9;
+            this.btn_writeToFile.Text = "Write to File";
+            this.btn_writeToFile.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 353);
+            this.ClientSize = new System.Drawing.Size(704, 314);
+            this.Controls.Add(this.btn_writeToFile);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_highest);
             this.Controls.Add(this.btn_lowest);
             this.Controls.Add(this.btn_average);
-            this.Controls.Add(this.btn_remStudent);
             this.Controls.Add(this.btn_addStudent);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.textBoxStudent);
@@ -135,12 +135,12 @@
         #endregion
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_addStudent;
-        private System.Windows.Forms.Button btn_remStudent;
         private System.Windows.Forms.Button btn_average;
         private System.Windows.Forms.Button btn_lowest;
         private System.Windows.Forms.Button btn_highest;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.TextBox textBoxStudent;
+        private System.Windows.Forms.Button btn_writeToFile;
     }
 }
 

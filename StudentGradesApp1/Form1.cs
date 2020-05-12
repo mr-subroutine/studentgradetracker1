@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudentGradesApp1
-{
+{ 
     public partial class Form1 : Form
     {
         protected string[] studentNames = new string[30];
         protected int[] studentGrades = new int[30];
+        protected int[] homeRooms = new int[30];
         protected int indexTracker = 0;
 
         public Form1()
@@ -31,6 +32,7 @@ namespace StudentGradesApp1
             bool isNameConfirmed = false;
             bool isGradeConfirmed = false;
 
+            // loops until user enters value for name
             while (isNameConfirmed != true)
             {
                 string nameEntry = inputStudent();
@@ -41,6 +43,7 @@ namespace StudentGradesApp1
                 }
             }
 
+            // loops until user enters value for grade
             while (isGradeConfirmed != true)
             {
                 int gradeEntry = 0;
@@ -57,10 +60,13 @@ namespace StudentGradesApp1
                 finally
                 {
                     studentGrades[indexTracker] = gradeEntry;
-                    indexTracker++;
                     isGradeConfirmed = true;
                 }
             }
+            addToTextBox(indexTracker, studentNames, studentGrades);
+            indexTracker++;
+            // invoke method to add the student and grade to text field.
+            // ();
         }
 
         private string inputStudent()
@@ -68,24 +74,33 @@ namespace StudentGradesApp1
             string name = "";
             try
             {
-                name = Microsoft.VisualBasic.Interaction.InputBox("Name Entry", "Enter Student First and Last Name", "");
+                name = Microsoft.VisualBasic.Interaction.InputBox("Please Enter Student First and Last Name", "Enter Name", "");
             }
 
             catch
             {
                 MessageBox.Show("Please enter a First name and Last name.");
             }
-
-            finally
-            {
-                return name;
-            }
+            return name;
         }
 
         private int inputGrade()
         {
-            int grade = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("Grade Entry", "Enter Grade", ""));
+            int grade = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("Please enter a numeric grade from 0-100", "Enter Grade", ""));
             return grade;
+        }
+
+        private void addToTextBox(int pos, string[] names, int[] grades)
+        {
+            string temp_name = names[pos];
+            int temp_grade = grades[pos];
+            textBoxStudent.Text += temp_name + "\t" + temp_grade.ToString("n");
+            textBoxStudent.Text += Environment.NewLine;
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            textBoxStudent.Clear();
         }
     }
 }
